@@ -23,7 +23,7 @@ export default function EditProfilePopup({ isOpen, onClose, onUpdateUser }) {
   function handleSubmit(e) {
     e.preventDefault();
     onUpdateUser({
-      name,
+      name:name,
       about: description
     });
   }
