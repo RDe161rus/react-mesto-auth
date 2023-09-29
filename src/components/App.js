@@ -154,21 +154,20 @@ function App() {
   };
   useEffect(() => {
     const jwt = localStorage.getItem('token');
-    if(jwt) {
+    if (jwt) {
       tokenCheck(jwt);
     }
   }, [loggedIn]);
 
-  const tokenCheck = (jwt) => {
-    auth.token(jwt)
-    .then((res) => {
-      if(res) {
+  const tokenCheck = jwt => {
+    auth.token(jwt).then(res => {
+      if (res) {
         setLoggedIn(true);
         setEmail(res.data.email);
-        navigate('/', {replace: true})
+        navigate('/', { replace: true });
       }
-    })
-  }
+    });
+  };
 
   const handleExit = () => {
     setLoggedIn(false);
@@ -202,14 +201,14 @@ function App() {
                 element={Main}
                 cards={cards}
                 loggedIn={loggedIn}
-                
                 onCardLike={handleCardLike}
                 onCardDelete={handleCardDelete}
                 onCardClick={handleCardClick} //
                 onAddPlace={handleAddPlaceClick}
                 onEditAvatar={handleEditAvatarClick}
                 onEditProfile={handleEditProfileClick}
-                />}
+              />
+            }
           />
         </Routes>
 
