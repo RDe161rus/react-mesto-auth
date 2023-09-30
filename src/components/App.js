@@ -155,18 +155,23 @@ function App() {
   useEffect(() => {
     const jwt = localStorage.getItem('token');
     if (jwt) {
-      tokenCheck(jwt);
+      checkToken(jwt);
     }
   }, [loggedIn]);
 
-  const tokenCheck = jwt => {
-    auth.token(jwt).then(res => {
-      if (res) {
-        setLoggedIn(true);
-        setEmail(res.data.email);
-        navigate('/', { replace: true });
-      }
-    });
+  const checkToken = jwt => {
+    auth
+      .checkToken(jwt)
+      .then(res => {
+        if (res) {
+          setLoggedIn(true);
+          setEmail(res.data.email);
+          navigate('/', { replace: true });
+        }
+      })
+      .catch(err => {
+        console.error(err);
+      });
   };
 
   const handleExit = () => {

@@ -25,7 +25,7 @@ export const login = (email, password) => {
   }).then(res => checkResponse(res));
 };
 
-export const token = token => {
+export const checkToken = token => {
   return fetch(`${BASE_URL}/users/me`, {
     method: 'GET',
     headers: {

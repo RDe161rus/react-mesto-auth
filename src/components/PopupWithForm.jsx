@@ -12,7 +12,7 @@ export default function PopupWithForm({
       <div className="popup__container">
         <button onClick={onClose} id="close-popup-btn" className="popup__close-btn" type="button" />
         <h3 className="popup__title">{title}</h3>
-        <form id={name} className="form" name={name} autoComplete="off" onSubmit={onSubmit}>
+        <form className="form" name={name} autoComplete="off" onSubmit={onSubmit}>
           <fieldset className="form__fieldset">{children}</fieldset>
           <button className="form__button" type="submit">
             {buttonText}

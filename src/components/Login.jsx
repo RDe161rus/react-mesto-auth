@@ -21,6 +21,7 @@ export default function Login({ onLogin }) {
         <input
           placeholder="Email"
           required
+          id='regEmail'
           type="text"
           value={email}
           onChange={handleEmailChange}

@@ -31,7 +31,7 @@ export default function Register({ onRegister }) {
           placeholder="Пароль"
           required
           id="password"
-          type="password"
+          type="userPassword"
           value={password}
           onChange={handlePasswordChange}
         />

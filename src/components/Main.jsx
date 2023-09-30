@@ -13,7 +13,6 @@ export default function Main({
 }) {
   const currentUser = useContext(CurrentUserContext);
   return (
-    <>
       <main className="main">
         <section className="profile">
           <div className="profile__profile-group">
@@ -57,6 +56,5 @@ export default function Main({
           ))}
         </section>
       </main>
-    </>
   );
 }
