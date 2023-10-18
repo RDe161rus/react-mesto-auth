@@ -26,4 +26,4 @@
 [Ссылка на макет в Figma](https://www.figma.com/file/2cn9N9jSkmxD84oJik7xL7/JavaScript.-Sprint-4?type=design&node-id=0-1&t=shv3aJ98Hoh5jhHJ-0)
 
 **Ссылка на сайт**
-Проект размещен на *[Mesto-React](https://rde161rus.github.io/mesto-react)  и доступен по ссылке.
+Проект размещен на *[React-Mesto-auth](https://rde161rus.github.io/react-mesto-auth)  и доступен по ссылке.
